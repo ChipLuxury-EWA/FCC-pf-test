@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@1,100&family=Raleway:wght@100&family=Righteous&display=swap');
+body {
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+}
+h1 {
+    font-family: 'Raleway', sans-serif;
+    padding-top: 30px;
+}
+p {
+    font-style: italic;
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "welcome"
+    "proj-sec"
+    "cont-sec"
+    "footer"
+    ;
+}
+#navbar {
+    grid-area: nav;
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    background-image: linear-gradient(180deg, #FF4C29, #ac351d);
+    box-shadow: 1px 1px #082032;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    padding: 5.5px 15px;
+    color: white;
+}
+a:hover {
+    background-color: #FF4C29;
+    border-radius: 5px;
+}
+#welcome-section {
+    grid-area: welcome;
+    height: 100vh;
+    background-image: linear-gradient(113deg, #2C394B, #334756 );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#projects-section {
+    grid-area: proj-sec;
+    background-color: #082032;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+#projects {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#contact-section {
+    grid-area: cont-sec;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #334756;
+    height: 70vh;
+}
+img {
+    border-radius: 10px;
+}
+footer {
+    grid-area: footer;
+    text-align: left;
+    border: 1px solid #082032;
+    background-color: #2C394B;
+    height: 30vh;
+}
+
+@media (max-width: 650px) {
+    #projects {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 25%);
+    }
+    #cont-links {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-around ;
+    }
+    #cont-links a {
+        width: fit-content;
+    }
+
+}
